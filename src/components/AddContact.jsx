@@ -71,7 +71,7 @@ const AddContact = ({ closeAddContact, onSubmit, defaultValue }) => {
         closeAddContact();
       }}
     >
-      <div className="add rounded p-[2rem] bg-white w-[26em] ">
+      <div className="add rounded p-[2rem] bg-white w-[26em] overflow-hidden ">
         <form className="w-full">
           <div className="mb-4">
             <label className="text-black text-lg  items-baseline flex flex-col">

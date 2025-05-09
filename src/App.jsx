@@ -5,7 +5,7 @@ import ContactPage from "./components/ContactPage";
 import Dashboard from "./components/Dashboard";
 
 function App() {
-  ///contactpage
+  ///contactPage
 
   const [userName, setUsername] = useState("");
   const [age, setAge] = useState("");
@@ -62,7 +62,7 @@ function App() {
     }
   };
 
-  //dashboradpage
+  //dashBoardPage
   const [addContactOpen, setAddContactOpen] = useState(false);
 
   const [rows, setRows] = useState([]);
@@ -72,16 +72,16 @@ function App() {
   const [records, setRecords] = useState();
 
   const filter = (event) => {
-    setRecords(rows.filter(e =>
-      ( e.userName.toLowerCase().includes(event.target.value)) ||
-      (e.email.toLowerCase().includes(event.target.value)) ||
-      (e.age.toString().toLowerCase().includes(event.target.value)) ||
-      ( e.number.toString().toLowerCase().includes(event.target.value))
-    ));
+    setRecords(
+      rows.filter(
+        (e) =>
+          e.userName.toLowerCase().includes(event.target.value) ||
+          e.email.toLowerCase().includes(event.target.value) ||
+          e.age.toString().toLowerCase().includes(event.target.value) ||
+          e.number.toString().toLowerCase().includes(event.target.value)
+      )
+    );
   };
-  
-  
-  
 
   const handleDltRow = (targetIndex) => {
     const updatedRows = rows.filter((_, index) => index !== targetIndex);
@@ -95,7 +95,7 @@ function App() {
 
     setAddContactOpen(true);
   };
-  
+
   const handleSumbit = (newRow) => {
     let updatedRows;
 
@@ -120,8 +120,8 @@ function App() {
 
   return (
     <>
-      <div className="font-poppins antialiased text-gray-900 m-0 p-0 box-border">
-        <div className="min-h-screen bg-purple-600 flex flex-col justify-center items-center text-center p-4">
+      <div className="font-poppins antialiased text-gray-900 m-0 p-0 box-border  bg-purple-600 ">
+        <div className="min-h-screen flex flex-col justify-center items-center text-center p-4">
           <div className="inline-block absolute top-8 left-0">
             <Link
               to="/contact"

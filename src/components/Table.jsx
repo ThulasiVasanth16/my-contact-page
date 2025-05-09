@@ -1,23 +1,23 @@
 import React from "react";
 import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
 
-const Table = ({ rows, deleteRow, editRow, filter, records }) => {
+const Table = ({ deleteRow, editRow, filter, records }) => {
   return (
     <div className="table-wrapper  w-full">
       <input
         type="text"
-        className="form-contro block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 w-[20rem] ml-[77%] my-[4%] max-w[20%]  "
+        className="form-control block rounded-md border-0 p-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 w-3/5 mx-auto my-7 max-w[20%] overflow-x-auto  "
         onChange={filter}
         placeholder="Search"
       />
       <table className="table-block  overflow-hidden table-fixed border-collapse shadow-xl rounded whitespace-nowrap  w-[100em] max-w-[96%] m-auto ]">
-        <thead className="thead bg-[#ccc] text=[#222]">
+        <thead className="thead bg-[#ccc] text=[#222] overflow-hidden">
           <tr>
-            <th className="p-[0.8rem]">Name</th>
-            <th className="p-[0.8rem]">Age</th>
-            <th className="p-[0.8rem]">Phone Number</th>
-            <th className="p-[0.8rem]"> Email</th>
-            <th className="p-[0.8rem]">Actions</th>
+            <th className="p-1 overflow-y-auto">Name</th>
+            <th className="p-1 overflow-y-auto">Age</th>
+            <th className="p-1 overflow-y-auto">Phone Number</th>
+            <th className="p-1 overflow-y-auto"> Email</th>
+            <th className="p-1 overflow-y-auto">Actions</th>
           </tr>
         </thead>
         <tbody>

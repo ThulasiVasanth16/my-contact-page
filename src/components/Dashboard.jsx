@@ -27,14 +27,14 @@ export default function Dashboard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="dashboard flex  ">
+    <div className="dashboard flex  w-3/5 ">
       <Sidebar />
       <div className="container bg-white flex-[6] ">
         <div className="App flex flex-col items-center justify-center h-auto ">
         {/* relative top-[10.6%] */}
           <Table rows={rows} deleteRow={handleDltRow} editRow={handleRowEdit}  filter={filter} records={records}/>
           <button
-            className="bg-[#1d4ed8] text-lg text-white px-2 py-2 rounded-xl shadow-[0px_5px_5px_#ccc]  cursor-pointer todo-btn mt-[40px] w-[5%] "
+            className="bg-[#1d4ed8] text-lg text-white px-2 py-2 rounded-xl shadow-[0px_5px_5px_#ccc]  cursor-pointer todo-btn mt-[40px] w-16 "
             onClick={() => setAddContactOpen(true)}
           >
             Add
